@@ -1,7 +1,7 @@
 import { GATEWAYS } from "@/lib/constants";
 import { Payload } from "@/types";
 
-const textToVideo = async (payload: Payload) => {
+const textToVideo = async (payload: { [key: string]: any }) => {
   const formData = new FormData();
 
   for (const key in payload) {

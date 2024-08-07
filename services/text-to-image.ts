@@ -1,7 +1,7 @@
 import { GATEWAYS } from "@/lib/constants";
 import { Payload } from "@/types";
 
-const textToImage = async (payload: Payload) => {
+const textToImage = async (payload: { [key: string]: any }) => {
   if (!payload.prompt) {
     throw new Error("prompt is required");
   }

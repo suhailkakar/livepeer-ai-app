@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Key } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Download } from "lucide-react";
@@ -42,7 +42,7 @@ export const OutputDisplay = ({
           )}
           {pipeline === "text-to-image" && output && (
             <div className="grid gap-4 grid-cols-2 mt-12">
-              {output?.map((item, index) => (
+              {output?.map((item: any, index: Key) => (
                 <div key={index} className="relative">
                   <Image
                     src={item.url}

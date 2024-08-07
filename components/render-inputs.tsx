@@ -33,7 +33,7 @@ const renderInput = (input: InputField, selectedPipline: string) => {
     case "select":
       if (input.id === "model_id") {
         return (
-          <Select name="model_id" defaultValue={input.default_value}>
+          <Select name="model_id" defaultValue={String(input.default_value)}>
             <SelectTrigger
               id="model_id"
               className="items-start [&_[data-description]]:hidden"
