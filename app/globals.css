@@ -64,13 +64,7 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    background-image: url("https://livepeer.studio/dashboard/noise.png") ;
-    background-repeat: repeat;
-    background-color: hsl(var(--background));
-    flex-direction: column;
-    justify-content: flex-start;
-    z-index: 1;
-    position: relative;
+    @apply bg-background text-foreground;
+    
   }
 }

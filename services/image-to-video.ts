@@ -1,0 +1,29 @@
+import { GATEWAYS } from "@/lib/constants";
+import { Payload } from "@/types";
+
+const textToVideo = async (payload: Payload) => {
+  const formData = new FormData();
+
+  for (const key in payload) {
+    if (key !== "pipeline") {
+      formData.append(key, payload[key]);
+    }
+  }
+
+  try {
+    const res = await fetch(GATEWAYS.LIVEPEER_CLOUD + "image-to-video", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!res.ok) {
+      throw new Error(`error ${res.status}`);
+    }
+    const data = await res.json();
+    return data.images;
+  } catch (error) {
+    throw new Error("Failed to fetch");
+  }
+};
+
+export default textToVideo;
