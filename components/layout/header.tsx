@@ -28,7 +28,7 @@ export default function Header() {
             asChild
           >
             <Link
-              href={"https://github.com/livepeer/ai-starter-kit"}
+              href={"https://github.com/suhailkakar/livepeer-ai-app"}
               target="_blank"
             >
               GitHub
